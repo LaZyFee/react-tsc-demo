@@ -1,5 +1,6 @@
 import { LoggedIn } from "./Componenets/Authentication/LoggedIn";
 import { Button } from "./Componenets/Button";
+import { Counter } from "./Componenets/Counter";
 import Greet from "./Componenets/Greet";
 import { Input } from "./Componenets/Input";
 import { NodeType } from "./Componenets/NodeType";
@@ -51,6 +52,7 @@ function App() {
       />
       <LoggedIn />
       <User />
+      <Counter />
     </>
   );
 }
