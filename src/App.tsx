@@ -11,6 +11,8 @@ import { NodeType } from "./Componenets/NodeType";
 import { Person } from "./Componenets/Person";
 import { PersonList } from "./Componenets/PersonList";
 import { PrimaryButton } from "./Componenets/PrimaryButton";
+import DomRef from "./Componenets/Ref/DomRef";
+import MutableRef from "./Componenets/Ref/MutableRef";
 import { User } from "./Componenets/State/User";
 import { Status } from "./Componenets/Status";
 function App() {
@@ -63,6 +65,8 @@ function App() {
       <UserProvider>
         <User2 />
       </UserProvider>
+      <DomRef />
+      <MutableRef />
     </>
   );
 }
