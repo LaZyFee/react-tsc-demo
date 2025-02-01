@@ -2,7 +2,9 @@ import { useReducer } from "react";
 
 const initialState = { count: 0 };
 type CounterState = { count: number };
-type CounterAction = { type: string; payload: number };
+type UpdateAction = { type: "INCREMENT" | "DECREMENT"; payload: number };
+type ResetAction = { type: "RESET" };
+type CounterAction = UpdateAction | ResetAction;
 
 function reducer(state: CounterState, action: CounterAction) {
   switch (action.type) {
@@ -10,6 +12,8 @@ function reducer(state: CounterState, action: CounterAction) {
       return { count: state.count + action.payload };
     case "DECREMENT":
       return { count: state.count - action.payload };
+    case "RESET":
+      return initialState;
     default:
       return state;
   }
@@ -33,6 +37,9 @@ export const Counter = () => {
         onClick={() => dispatch({ type: "DECREMENT", payload: 10 })}
       >
         Decrement
+      </button>
+      <button className="btn" onClick={() => dispatch({ type: "RESET" })}>
+        Reset
       </button>
     </>
   );

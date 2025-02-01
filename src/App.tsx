@@ -1,5 +1,7 @@
 import { LoggedIn } from "./Componenets/Authentication/LoggedIn";
 import { Button } from "./Componenets/Button";
+import { Box } from "./Componenets/Context/Box";
+import { ThemeContextProvider } from "./Componenets/Context/ThemeProvider";
 import { Counter } from "./Componenets/Counter";
 import Greet from "./Componenets/Greet";
 import { Input } from "./Componenets/Input";
@@ -53,6 +55,9 @@ function App() {
       <LoggedIn />
       <User />
       <Counter />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </>
   );
 }
