@@ -1,3 +1,5 @@
+import { Private } from "./Componenets/Auth/Private";
+import { Profile } from "./Componenets/Auth/Profile";
 import { LoggedIn } from "./Componenets/Authentication/LoggedIn";
 import { Button } from "./Componenets/Button";
 import { Box } from "./Componenets/Context/Box";
@@ -67,6 +69,7 @@ function App() {
       </UserProvider>
       <DomRef />
       <MutableRef />
+      <Private isLoggedIn={true} component={Profile} />
     </>
   );
 }
