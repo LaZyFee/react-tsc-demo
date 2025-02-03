@@ -16,6 +16,7 @@ import { PersonList } from "./Componenets/PersonList";
 import { PrimaryButton } from "./Componenets/PrimaryButton";
 import DomRef from "./Componenets/Ref/DomRef";
 import MutableRef from "./Componenets/Ref/MutableRef";
+import { RandomNumber } from "./Componenets/Restriction/RandomNumber";
 import { User } from "./Componenets/State/User";
 import { Status } from "./Componenets/Status";
 function App() {
@@ -92,6 +93,8 @@ function App() {
         onClick={(item) => console.log(item)}
         renderItem={(item) => `${item.first} ${item.last}`} // Convert object to string
       />
+
+      <RandomNumber value={10} isPositive />
     </>
   );
 }
