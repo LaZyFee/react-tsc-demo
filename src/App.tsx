@@ -9,6 +9,7 @@ import { UserProvider } from "./Componenets/Context/UserProvider";
 import { Counter } from "./Componenets/Counter";
 import { List } from "./Componenets/Generics/List";
 import Greet from "./Componenets/Greet";
+import { CustomButton } from "./Componenets/html/Button";
 import { Input } from "./Componenets/Input";
 import { NodeType } from "./Componenets/NodeType";
 import { Person } from "./Componenets/Person";
@@ -96,6 +97,14 @@ function App() {
       />
       <RandomNumber value={10} isPositive />
       <Toast position="right-bottom" />
+      <CustomButton
+        variant="primary"
+        onClick={() => {
+          console.log("Clicked");
+        }}
+      >
+        Click me
+      </CustomButton>
     </>
   );
 }
