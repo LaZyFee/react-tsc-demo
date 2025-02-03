@@ -14,6 +14,7 @@ import { Input } from "./Componenets/Input";
 import { NodeType } from "./Componenets/NodeType";
 import { Person } from "./Componenets/Person";
 import { PersonList } from "./Componenets/PersonList";
+import { Text } from "./Componenets/Polymorphic/text";
 import { PrimaryButton } from "./Componenets/PrimaryButton";
 import DomRef from "./Componenets/Ref/DomRef";
 import MutableRef from "./Componenets/Ref/MutableRef";
@@ -105,6 +106,13 @@ function App() {
       >
         Click me
       </CustomButton>
+      <Text size="md" color="primary" as="h2">
+        {" "}
+        Hello
+      </Text>
+      <Text size="md" color="primary" as="label" htmlFor="input">
+        Label
+      </Text>
     </>
   );
 }
