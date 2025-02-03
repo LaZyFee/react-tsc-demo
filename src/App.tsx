@@ -19,6 +19,7 @@ import MutableRef from "./Componenets/Ref/MutableRef";
 import { RandomNumber } from "./Componenets/Restriction/RandomNumber";
 import { User } from "./Componenets/State/User";
 import { Status } from "./Componenets/Status";
+import { Toast } from "./Componenets/Templateliterals/Toast";
 function App() {
   const PersonName = {
     first: "Rohit",
@@ -93,8 +94,8 @@ function App() {
         onClick={(item) => console.log(item)}
         renderItem={(item) => `${item.first} ${item.last}`} // Convert object to string
       />
-
       <RandomNumber value={10} isPositive />
+      <Toast position="right-bottom" />
     </>
   );
 }
