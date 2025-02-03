@@ -7,6 +7,7 @@ import { ThemeContextProvider } from "./Componenets/Context/ThemeProvider";
 import { User2 } from "./Componenets/Context/User2";
 import { UserProvider } from "./Componenets/Context/UserProvider";
 import { Counter } from "./Componenets/Counter";
+import { List } from "./Componenets/Generics/List";
 import Greet from "./Componenets/Greet";
 import { Input } from "./Componenets/Input";
 import { NodeType } from "./Componenets/NodeType";
@@ -70,6 +71,27 @@ function App() {
       <DomRef />
       <MutableRef />
       <Private isLoggedIn={true} component={Profile} />
+      <List
+        items={["a", "b", "c"]}
+        onClick={(item) => console.log(item)}
+        renderItem={(item) => item} // Strings can be directly rendered
+      />
+
+      <List
+        items={[1, 2, 3]}
+        onClick={(item) => console.log(item)}
+        renderItem={(item) => item} // Numbers can be directly rendered
+      />
+
+      <List
+        items={[
+          { first: "Rohit", last: "Sharma" },
+          { first: "Asma", last: "Priya" },
+          { first: "Pillow", last: "Fluff" },
+        ]}
+        onClick={(item) => console.log(item)}
+        renderItem={(item) => `${item.first} ${item.last}`} // Convert object to string
+      />
     </>
   );
 }
